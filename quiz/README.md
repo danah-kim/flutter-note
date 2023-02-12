@@ -1,16 +1,17 @@
-# quiz
+<div align="center">
 
-A new Flutter project.
+# Quiz
 
-## Getting Started
+[Flutter & Dart - The Complete Guide [2023 Edition]](https://www.udemy.com/course/learn-flutter-dart-to-build-ios-android-apps)
 
-This project is a starting point for a Flutter application.
+A Complete Guide to the Flutter SDK & Flutter Framework for building native iOS and Android apps
 
-A few resources to get you started if this is your first Flutter project:
+</div>
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Note
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- `runApp()` 함수는 메인 위젯을 빌드하고 그 위에 build() 메서드를 호출합니다.
+
+- `build()` 메서드는 화면에 렌더링되어야 하는 위젯("위젯 트리")을 반환합니다.
+
+- `Widget`은 Flutter 사용자 인터페이스의 핵심 구성요소입니다.
