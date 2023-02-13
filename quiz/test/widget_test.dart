@@ -6,7 +6,8 @@ void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
     await tester.pumpWidget(App());
 
-    expect(find.text('Hello world!'), findsOneWidget);
+    expect(find.text('My First App'), findsOneWidget);
+    expect(find.text('This is my default text!'), findsOneWidget);
     expect(find.text('1'), findsNothing);
   });
 }
