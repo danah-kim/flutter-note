@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quiz/question.dart';
 
 var questions = [
   'What\'s your favorite color?',
@@ -20,7 +21,6 @@ class _AppState extends State<App> {
     setState(() {
       questionIndex = index;
     });
-    print(questionIndex);
   }
 
   @override
@@ -32,7 +32,7 @@ class _AppState extends State<App> {
       ),
       body: Column(
         children: [
-          Text(questions[questionIndex]),
+          Question(questions[questionIndex]),
           ElevatedButton(
             child: Text('Answer 1'),
             onPressed: () => onAnswerQuestionPressed(0),
