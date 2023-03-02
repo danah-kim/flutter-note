@@ -5,6 +5,7 @@ import '../models/transaction.dart';
 
 class TransactionList extends StatelessWidget {
   final List<TransactionModel> transactions;
+
   const TransactionList(this.transactions, {super.key});
 
   @override
