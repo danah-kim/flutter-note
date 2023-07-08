@@ -289,8 +289,8 @@ class SchedulesCompanion extends UpdateCompanion<Schedule> {
   }
 }
 
-abstract class _$LocalDatabase extends GeneratedDatabase {
-  _$LocalDatabase(QueryExecutor e) : super(e);
+abstract class _$SchduleDatabase extends GeneratedDatabase {
+  _$SchduleDatabase(QueryExecutor e) : super(e);
   late final $SchedulesTable schedules = $SchedulesTable(this);
   @override
   Iterable<TableInfo<Table, Object?>> get allTables =>

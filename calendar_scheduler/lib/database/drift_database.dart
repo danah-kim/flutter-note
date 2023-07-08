@@ -12,11 +12,14 @@ part 'drift_database.g.dart';
     Schedules,
   ],
 )
-class LocalDatabase extends _$LocalDatabase {
-  LocalDatabase() : super(_openConnection());
+class SchduleDatabase extends _$SchduleDatabase {
+  SchduleDatabase() : super(_openConnection());
 
   Stream<List<Schedule>> watchSchedules(DateTime date) =>
       (select(schedules)..where((tbl) => tbl.date.equals(date))).watch();
+
+  Future<List<Schedule>> getSchedules(DateTime date) =>
+      (select(schedules)..where((tbl) => tbl.date.equals(date))).get();
 
   Future<int> createSchedule(SchedulesCompanion data) =>
       into(schedules).insert(data);
@@ -34,7 +37,7 @@ class LocalDatabase extends _$LocalDatabase {
 LazyDatabase _openConnection() {
   return LazyDatabase(() async {
     final dbFolder = await getApplicationDocumentsDirectory();
-    final file = File(p.join(dbFolder.path, 'db.sqlite'));
+    final file = File(p.join(dbFolder.path, 'schedule_db.sqlite'));
     return NativeDatabase(file);
   });
 }
