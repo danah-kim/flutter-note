@@ -1,10 +1,10 @@
 import 'package:calendar_scheduler/component/custom_text_field.dart';
 import 'package:calendar_scheduler/const/colors.dart';
+import 'package:calendar_scheduler/controller/schedule.controller.dart';
 import 'package:calendar_scheduler/database/drift_database.dart';
-import 'package:calendar_scheduler/provider/schedule_provider.dart';
 import 'package:drift/drift.dart' hide Column;
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
+import 'package:get/get.dart' hide Value;
 
 class ScheduleBottomSheet extends StatefulWidget {
   final DateTime selecteDate;
@@ -35,6 +35,7 @@ class _ScheduleBottomSheetState extends State<ScheduleBottomSheet> {
 
   @override
   Widget build(BuildContext context) {
+    final scheduleController = Get.put(ScheduleController());
     final bottomInset = MediaQuery.of(context).viewInsets.bottom;
     final isEditMode = widget.id != null;
 
@@ -92,8 +93,8 @@ class _ScheduleBottomSheetState extends State<ScheduleBottomSheet> {
                   width: double.infinity,
                   child: ElevatedButton(
                     onPressed: () => isEditMode
-                        ? onEditPressed(context)
-                        : onSavePressed(context),
+                        ? onEditPressed(scheduleController)
+                        : onSavePressed(scheduleController),
                     style: ElevatedButton.styleFrom(
                       backgroundColor: PRIMARY_COLOR,
                     ),
@@ -108,45 +109,35 @@ class _ScheduleBottomSheetState extends State<ScheduleBottomSheet> {
     );
   }
 
-  void onEditPressed(BuildContext context) {
+  void onEditPressed(ScheduleController scheduleController) {
     if (formKey.currentState!.validate()) {
       formKey.currentState!.save();
 
-      context.read<ScheduleProvider>().updateSchedule(
-            schedule: Schedule(
-                id: widget.id!,
-                content: content!,
-                date: widget.selecteDate,
-                startTime: startTime!,
-                endTime: endTime!),
-          );
+      scheduleController.updateSchedule(
+        schedule: Schedule(
+            id: widget.id!,
+            content: content!,
+            date: widget.selecteDate,
+            startTime: startTime!,
+            endTime: endTime!),
+      );
 
       Navigator.of(context).pop();
     }
   }
 
-  void onSavePressed(BuildContext context) {
+  void onSavePressed(ScheduleController scheduleController) {
     if (formKey.currentState!.validate()) {
       formKey.currentState!.save();
 
-      // context.read<ScheduleProvider>().createSchedule(
-      //       schedule: Schedule(
-      //         id:,
-      //         startTime: startTime!,
-      //         endTime: endTime!,
-      //         content: content!,
-      //         date: widget.selecteDate,
-      //       ),
-      //     );
-
-      context.read<ScheduleProvider>().createSchedule(
-            schedule: SchedulesCompanion(
-              startTime: Value(startTime!),
-              endTime: Value(endTime!),
-              content: Value(content!),
-              date: Value(widget.selecteDate),
-            ),
-          );
+      scheduleController.createSchedule(
+        schedule: SchedulesCompanion(
+          startTime: Value(startTime!),
+          endTime: Value(endTime!),
+          content: Value(content!),
+          date: Value(widget.selecteDate),
+        ),
+      );
 
       if (context.mounted) Navigator.of(context).pop();
     }

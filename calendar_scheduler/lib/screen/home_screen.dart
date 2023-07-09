@@ -3,81 +3,77 @@ import 'package:calendar_scheduler/component/schdule_card.dart';
 import 'package:calendar_scheduler/component/schedule_bottom_sheet.dart';
 import 'package:calendar_scheduler/component/today_banner.dart';
 import 'package:calendar_scheduler/const/colors.dart';
-import 'package:calendar_scheduler/provider/schedule_provider.dart';
+import 'package:calendar_scheduler/controller/schedule.controller.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
+import 'package:get/get.dart';
 
 class HomeScreen extends StatelessWidget {
-  DateTime selectedDate = DateTime.utc(
-    DateTime.now().year,
-    DateTime.now().month,
-    DateTime.now().day,
-  );
-
-  HomeScreen({super.key});
+  const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final provider = context.watch<ScheduleProvider>();
-    final selectedDate = provider.selectedDate;
-    final schedules = provider.cache[selectedDate] ?? [];
+    final scheduleController = Get.put(ScheduleController());
 
     return Scaffold(
       body: SafeArea(
-        child: Column(
-          children: [
-            MainCalendar(
-              selectedDate: selectedDate,
-              onDaySelected: (selectedDate, focusedDate) =>
-                  onDaySelected(selectedDate, focusedDate, context),
-            ),
-            const SizedBox(height: 8.0),
-            TodayBanner(
-              selectedDate: selectedDate,
-              count: schedules.length,
-            ),
-            const SizedBox(height: 8.0),
-            Expanded(
-              child: ListView.builder(
-                itemCount: schedules.length,
-                itemBuilder: (context, index) {
-                  final schedule = schedules[index];
+        child: Obx(
+          () => Column(
+            children: [
+              MainCalendar(
+                selectedDate: scheduleController.selectedDate.value,
+                onDaySelected: (selectedDate, focusedDate) => onDaySelected(
+                    selectedDate, focusedDate, scheduleController),
+              ),
+              const SizedBox(height: 8.0),
+              TodayBanner(
+                selectedDate: scheduleController.selectedDate.value,
+                count: scheduleController.schedules.length,
+              ),
+              const SizedBox(height: 8.0),
+              Expanded(
+                child: ListView.builder(
+                  itemCount: scheduleController.schedules.length,
+                  itemBuilder: (context, index) {
+                    final schedule = scheduleController.schedules[index];
 
-                  return Dismissible(
-                    key: ObjectKey(schedule.id),
-                    direction: DismissDirection.endToStart,
-                    onDismissed: (DismissDirection direction) {
-                      provider.deleteSchedule(id: schedule.id);
-                    },
-                    child: GestureDetector(
-                      onTap: () {
-                        showModalBottomSheet(
-                          context: context,
-                          builder: (_) => ScheduleBottomSheet(
-                            selecteDate: selectedDate,
-                            id: schedule.id,
+                    return Dismissible(
+                      key: ObjectKey(schedule.id),
+                      direction: DismissDirection.endToStart,
+                      onDismissed: (DismissDirection direction) {
+                        scheduleController.deleteSchedule(id: schedule.id);
+                      },
+                      child: GestureDetector(
+                        onTap: () {
+                          showModalBottomSheet(
+                            context: context,
+                            builder: (_) => ScheduleBottomSheet(
+                              selecteDate:
+                                  scheduleController.selectedDate.value,
+                              id: schedule.id,
+                              startTime: schedule.startTime,
+                              endTime: schedule.endTime,
+                              content: schedule.content,
+                            ),
+                            isDismissible: true,
+                            isScrollControlled: true,
+                          );
+                        },
+                        child: Padding(
+                          padding:
+                              const EdgeInsets.only(bottom: 8.0, left: 8.0),
+                          child: ScheduleCard(
                             startTime: schedule.startTime,
                             endTime: schedule.endTime,
                             content: schedule.content,
                           ),
-                          isDismissible: true,
-                          isScrollControlled: true,
-                        );
-                      },
-                      child: Padding(
-                        padding: const EdgeInsets.only(bottom: 8.0, left: 8.0),
-                        child: ScheduleCard(
-                          startTime: schedule.startTime,
-                          endTime: schedule.endTime,
-                          content: schedule.content,
                         ),
                       ),
-                    ),
-                  );
-                },
+                    );
+                  },
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
       floatingActionButton: FloatingActionButton(
@@ -86,7 +82,7 @@ class HomeScreen extends StatelessWidget {
           showModalBottomSheet(
             context: context,
             builder: (_) => ScheduleBottomSheet(
-              selecteDate: selectedDate,
+              selecteDate: scheduleController.selectedDate.value,
             ),
             isDismissible: true,
             isScrollControlled: true,
@@ -100,12 +96,9 @@ class HomeScreen extends StatelessWidget {
   void onDaySelected(
     DateTime selectedDate,
     DateTime focusedDate,
-    BuildContext context,
+    ScheduleController scheduleController,
   ) {
-    final provider = context.read<ScheduleProvider>();
-    provider.changeSelectedDate(
-      date: selectedDate,
-    );
-    provider.getSchedules(date: selectedDate);
+    scheduleController.changeSelectedDate(date: selectedDate);
+    scheduleController.getSchedules(date: selectedDate);
   }
 }
