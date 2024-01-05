@@ -1,7 +1,8 @@
 repo_name: danah-kim/flutter-note
 report_id: 5ccd0f495f6a6aa9ac7d75d4d797dc89
+version: 0.1
 repo_type: Public
-timestamp: '2023-11-12T12:00:54+00:00'
+timestamp: '2024-01-05T08:48:56+00:00'
 requested_by: danah-kim
 provider: github
 branch: main
@@ -15,6 +16,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/no-img-open-source.png
+  detection_source_url: https://github.com/danah-kim/flutter-note
   detection_source: Repo Metadata
 - name: C++
   description: Has imperative, object-oriented and generic programming features, while
@@ -25,6 +27,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/1049/cplusplus.png
+  detection_source_url: https://github.com/danah-kim/flutter-note
   detection_source: Repo Metadata
 - name: Dart
   description: A new web programming language with libraries, a virtual machine, and
@@ -35,6 +38,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/1646/Twitter-02.png
+  detection_source_url: https://github.com/danah-kim/flutter-note
   detection_source: Repo Metadata
 - name: JavaScript
   description: Lightweight, interpreted, object-oriented language with first-class
@@ -45,6 +49,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/1209/javascript.jpeg
+  detection_source_url: https://github.com/danah-kim/flutter-note/blob/main/toonflix/pubspec.yaml
   detection_source: toonflix/pubspec.yaml
   last_updated_by: Danah
   last_updated_on: 2023-02-09 13:11:24.000000000 Z
@@ -56,6 +61,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/3750/pCfEzr6L.png
+  detection_source_url: https://github.com/danah-kim/flutter-note
   detection_source: Repo Metadata
 - name: Objective-C
   description: The primary programming language you use when writing software for
@@ -66,6 +72,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/1008/xcode.png
+  detection_source_url: https://github.com/danah-kim/flutter-note
   detection_source: Repo Metadata
 - name: Ruby
   description: A dynamic, interpreted, open source programming language with a focus
@@ -76,6 +83,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/989/ruby.png
+  detection_source_url: https://github.com/danah-kim/flutter-note
   detection_source: Repo Metadata
 - name: Swift
   description: 'An innovative new programming language for Cocoa and Cocoa Touch. '
@@ -86,6 +94,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/1009/tuHsaI2U.png
+  detection_source_url: https://github.com/danah-kim/flutter-note
   detection_source: Repo Metadata
 - name: Android SDK
   description: An SDK that provides you the API libraries and developer tools necessary
@@ -97,7 +106,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Frameworks (Full Stack)
   image_url: https://img.stackshare.io/service/1010/m8jf0po4imu8t5eemjdd.png
-  detection_source_url: webview/android/app/build.gradle
+  detection_source_url: https://github.com/danah-kim/flutter-note/blob/main/webview/android/app/build.gradle
   detection_source: webview/android/app/build.gradle
   last_updated_by: Danah
   last_updated_on: 2023-06-25 12:31:25.000000000 Z
@@ -110,7 +119,8 @@ tools:
   category: Languages & Frameworks
   sub_category: Cross-Platform Mobile Development
   image_url: https://img.stackshare.io/service/7180/flutter-mark-square-100.png
-  detection_source: webview/pubspec.yaml
+  detection_source_url: https://github.com/danah-kim/flutter-note/blob/main/calendar_scheduler/pubspec.yaml
+  detection_source: calendar_scheduler/pubspec.yaml
   last_updated_by: Danah
   last_updated_on: 2023-07-03 13:24:54.000000000 Z
 - name: CMake
@@ -121,6 +131,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Java Build Tools
   image_url: https://img.stackshare.io/service/2424/0UlUI_y1_400x400.jpg
+  detection_source_url: https://github.com/danah-kim/flutter-note
   detection_source: Repo Metadata
 - name: Git
   description: Fast, scalable, distributed revision control system
@@ -130,6 +141,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Version Control System
   image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source_url: https://github.com/danah-kim/flutter-note
   detection_source: Repo Metadata
 - name: Gradle
   description: A powerful build system for the JVM
@@ -140,6 +152,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Java Build Tools
   image_url: https://img.stackshare.io/service/975/gradlephant-social-black-bg.png
+  detection_source_url: https://github.com/danah-kim/flutter-note/blob/main/calendar_scheduler/android/app/build.gradle
   detection_source: calendar_scheduler/android/app/build.gradle
   last_updated_by: Danah
   last_updated_on: 2023-07-03 13:24:54.000000000 Z
@@ -151,6 +164,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Front End Package Manager
   image_url: https://img.stackshare.io/service/1120/lejvzrnlpb308aftn31u.png
+  detection_source_url: https://github.com/danah-kim/flutter-note/blob/main/toonflix/pubspec.yaml
   detection_source: toonflix/pubspec.yaml
   last_updated_by: Danah
   last_updated_on: 2023-02-09 13:11:24.000000000 Z
@@ -163,7 +177,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Operating Systems
   image_url: https://img.stackshare.io/service/9586/ZvmtaSXW_400x400.jpg
-  detection_source_url: webview/android/app/build.gradle
+  detection_source_url: https://github.com/danah-kim/flutter-note/blob/main/webview/android/app/build.gradle
   detection_source: webview/android/app/build.gradle
   last_updated_by: Danah
   last_updated_on: 2023-06-25 12:31:25.000000000 Z
@@ -175,7 +189,8 @@ tools:
   category: Libraries
   sub_category: CocoaPods Packages
   image_url: https://img.stackshare.io/service/2426/e1cbdef9d4b11484049a033886578e54_400x400.png
-  detection_source: webview/macos/Podfile.lock
+  detection_source_url: https://github.com/danah-kim/flutter-note/blob/main/calendar_scheduler/ios/Podfile.lock
+  detection_source: calendar_scheduler/ios/Podfile.lock
   last_updated_by: Danah
   last_updated_on: 2023-07-03 13:24:54.000000000 Z
 - name: build_runner
@@ -187,7 +202,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Package Managers
   image_url: https://img.stackshare.io/package/pub/image.png
-  detection_source_url: calendar_scheduler/pubspec.lock
+  detection_source_url: https://github.com/danah-kim/flutter-note/blob/main/calendar_scheduler/pubspec.lock
   detection_source: calendar_scheduler/pubspec.yaml
   last_updated_by: Danah
   last_updated_on: 2023-07-03 13:24:54.000000000 Z
@@ -200,8 +215,8 @@ tools:
   category: Build, Test, Deploy
   sub_category: Package Managers
   image_url: https://img.stackshare.io/package/pub/image.png
-  detection_source_url: calendar_scheduler/pubspec.lock
-  detection_source: webview/pubspec.yaml
+  detection_source_url: https://github.com/danah-kim/flutter-note/blob/main/calendar_scheduler/pubspec.lock
+  detection_source: calendar_scheduler/pubspec.yaml
   last_updated_by: Danah
   last_updated_on: 2023-07-03 13:24:54.000000000 Z
 - name: dio
@@ -217,7 +232,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Package Managers
   image_url: https://img.stackshare.io/package/pub/image.png
-  detection_source_url: calendar_scheduler/pubspec.lock
+  detection_source_url: https://github.com/danah-kim/flutter-note/blob/main/calendar_scheduler/pubspec.lock
   detection_source: calendar_scheduler/pubspec.yaml
   last_updated_by: Danah
   last_updated_on: 2023-07-03 13:24:54.000000000 Z
@@ -230,8 +245,8 @@ tools:
   category: Build, Test, Deploy
   sub_category: Package Managers
   image_url: https://img.stackshare.io/package/pub/image.png
-  detection_source_url: calendar_scheduler/pubspec.lock
-  detection_source: webview/pubspec.yaml
+  detection_source_url: https://github.com/danah-kim/flutter-note/blob/main/calendar_scheduler/pubspec.lock
+  detection_source: calendar_scheduler/pubspec.yaml
   last_updated_by: Danah
   last_updated_on: 2023-07-03 13:24:54.000000000 Z
 - name: get_it
@@ -245,7 +260,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Package Managers
   image_url: https://img.stackshare.io/package/pub/image.png
-  detection_source_url: calendar_scheduler/pubspec.lock
+  detection_source_url: https://github.com/danah-kim/flutter-note/blob/main/calendar_scheduler/pubspec.lock
   detection_source: calendar_scheduler/pubspec.yaml
   last_updated_by: Danah
   last_updated_on: 2023-07-03 13:24:54.000000000 Z
@@ -258,7 +273,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Package Managers
   image_url: https://img.stackshare.io/package/pub/image.png
-  detection_source_url: toonflix/pubspec.lock
+  detection_source_url: https://github.com/danah-kim/flutter-note/blob/main/toonflix/pubspec.lock
   detection_source: toonflix/pubspec.yaml
   last_updated_by: Danah
   last_updated_on: 2023-02-10 01:29:14.000000000 Z
@@ -271,8 +286,8 @@ tools:
   category: Build, Test, Deploy
   sub_category: Package Managers
   image_url: https://img.stackshare.io/package/pub/image.png
-  detection_source_url: calendar_scheduler/pubspec.lock
-  detection_source: personal_expenses/pubspec.yaml
+  detection_source_url: https://github.com/danah-kim/flutter-note/blob/main/calendar_scheduler/pubspec.lock
+  detection_source: calendar_scheduler/pubspec.yaml
   last_updated_by: Danah
   last_updated_on: 2023-07-03 13:24:54.000000000 Z
 - name: path
@@ -284,7 +299,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Package Managers
   image_url: https://img.stackshare.io/package/pub/image.png
-  detection_source_url: calendar_scheduler/pubspec.lock
+  detection_source_url: https://github.com/danah-kim/flutter-note/blob/main/calendar_scheduler/pubspec.lock
   detection_source: calendar_scheduler/pubspec.yaml
   last_updated_by: Danah
   last_updated_on: 2023-07-03 13:24:54.000000000 Z
@@ -298,7 +313,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Package Managers
   image_url: https://img.stackshare.io/package/pub/image.png
-  detection_source_url: calendar_scheduler/pubspec.lock
+  detection_source_url: https://github.com/danah-kim/flutter-note/blob/main/calendar_scheduler/pubspec.lock
   detection_source: calendar_scheduler/pubspec.yaml
   last_updated_by: Danah
   last_updated_on: 2023-07-03 13:24:54.000000000 Z
@@ -312,7 +327,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Package Managers
   image_url: https://img.stackshare.io/package/pub/image.png
-  detection_source_url: calendar_scheduler/pubspec.lock
+  detection_source_url: https://github.com/danah-kim/flutter-note/blob/main/calendar_scheduler/pubspec.lock
   detection_source: calendar_scheduler/pubspec.yaml
   last_updated_by: Danah
   last_updated_on: 2023-07-03 13:24:54.000000000 Z
@@ -325,7 +340,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Package Managers
   image_url: https://img.stackshare.io/package/pub/image.png
-  detection_source_url: toonflix/pubspec.lock
+  detection_source_url: https://github.com/danah-kim/flutter-note/blob/main/toonflix/pubspec.lock
   detection_source: toonflix/pubspec.yaml
   last_updated_by: Danah
   last_updated_on: 2023-02-11 15:18:26.000000000 Z
@@ -338,7 +353,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Package Managers
   image_url: https://img.stackshare.io/package/pub/image.png
-  detection_source_url: calendar_scheduler/pubspec.lock
+  detection_source_url: https://github.com/danah-kim/flutter-note/blob/main/calendar_scheduler/pubspec.lock
   detection_source: calendar_scheduler/pubspec.yaml
   last_updated_by: Danah
   last_updated_on: 2023-07-03 13:24:54.000000000 Z
@@ -351,7 +366,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Package Managers
   image_url: https://img.stackshare.io/package/pub/image.png
-  detection_source_url: toonflix/pubspec.lock
+  detection_source_url: https://github.com/danah-kim/flutter-note/blob/main/toonflix/pubspec.lock
   detection_source: toonflix/pubspec.yaml
   last_updated_by: Danah
   last_updated_on: 2023-02-11 09:24:56.000000000 Z
@@ -364,7 +379,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Package Managers
   image_url: https://img.stackshare.io/package/pub/image.png
-  detection_source_url: calendar_scheduler/pubspec.lock
+  detection_source_url: https://github.com/danah-kim/flutter-note/blob/main/calendar_scheduler/pubspec.lock
   detection_source: calendar_scheduler/pubspec.yaml
   last_updated_by: Danah
   last_updated_on: 2023-07-03 13:24:54.000000000 Z
@@ -377,7 +392,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Package Managers
   image_url: https://img.stackshare.io/package/pub/image.png
-  detection_source_url: webview/pubspec.lock
+  detection_source_url: https://github.com/danah-kim/flutter-note/blob/main/webview/pubspec.lock
   detection_source: webview/pubspec.yaml
   last_updated_by: Danah
   last_updated_on: 2023-06-25 12:40:10.000000000 Z
@@ -389,6 +404,7 @@ tools:
   category: Libraries
   sub_category: Maven Packages
   image_url: https://img.stackshare.io/package/maven/image.png
-  detection_source: webview/android/app/build.gradle
+  detection_source_url: https://github.com/danah-kim/flutter-note/blob/main/calendar_scheduler/android/app/build.gradle
+  detection_source: calendar_scheduler/android/app/build.gradle
   last_updated_by: Danah
   last_updated_on: 2023-07-03 13:24:54.000000000 Z
